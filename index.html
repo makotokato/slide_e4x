@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>RIP E4X</title>
+
+		<meta name="description" content="RIP E4X">
+		<meta name="author" content="Makoto Kato">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>E4X</h1>
+					<h3>追悼E4X （仮)</h3>
+					<p>
+						<small><a href="mailto:m_kato@g2.so-net.ne.jp">Makoto Kato</a> / <a href="http://twitter.com/makoto_kato">@makoto_kato</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>E4X?</h2>
+					<p>正式名称はECMAScript for XML</p>
+					<p>ECMA-357として標準化</p>
+					<p>ECMAScriptでXMLを簡単に扱う仕組み</p>
+				</section>
+
+				<section>
+					<img src="title.png"/>
+				</section>
+
+				<section>
+					<h2>実装処理系</h2>
+				</section>
+
+				<section>
+					<h2>SpiderMonkey</h2>
+					<img src="bz-spidermonkey.png">
+				</section>
+
+				<section>
+					<h2>SpiderMonkey</h2>
+					<p>Gecko 1.8.0 / Firefox 1.5でのサポート</p>
+					<p>Firefox 21で完全に削除</p>
+				</section>
+
+				<section>
+					<h2>Rhino</h2>
+					<img src="bz-rinho.png"/>
+				</section>
+
+				<section>
+					<h2>Rhino</h2>
+					<p>Rhino 1.6R1で実装</p>
+					<p>By BEA and  AgileDelta</p>
+				</section>
+
+				<section>
+					<img src="java.png"/>
+					<p><a href="http://docs.oracle.com/javase/6/docs/technotes/guides/scripting/programmer_guide/index.html#jsengine">http://docs.oracle.com/javase/6/docs/technotes/guides/scripting/programmer_guide/index.html#jsengine</a></p>
+				</section>
+
+				<section>
+					<h2>ActionScript (Adobe Flash)</h2>
+					<img src="as3.png"/>
+				</section>
+
+				<section>
+					<h2>ActionScript</h2>
+					<p>ActionScript 3でサポート</p>
+					<p>Flash 9+</p>
+					<p>AIR 1.0+</p>
+				</section>
+
+				<section>
+					<h2>JavaScript Core</h2>
+					<img src="jsc.png"/>
+				</section>
+
+
+				<section>
+					<h2>V8</h2>
+					<img src="v8.png"/>
+				</section>
+
+				<section>
+					<h2>実装したエンジン</h2>
+					<ul>
+						<li>Firefox/Gecko (SpiderMonkey)</li>
+						<li>Rhino</li>
+						<li>Flash/ActionScript</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>実装してない（しなかった)エンジン</h2>
+					<ul>
+						<li>Chrome/V8</li>
+						<li>WebKit/JavaScriptCore</li>
+						<li>Internet Explorer</li>
+						<li>Opera</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>時代背景</h2>
+				</section>
+
+				<section>
+					<img src="soap.png"/>
+				</section>
+
+				<section>
+					<img src="xhtml.png"/>
+					<p><a href="http://www.w3.org/TR/xhtml1/">http://www.w3.org/TR/xhtml1/</a>
+				</section>
+
+				<section>
+					<p>XHTML 1.0 (this specification) is the first document type in the XHTML family. It is a reformulation of the three HTML 4 document types as applications of XML 1.0 [XML]. It is intended to be used as a language for content that is both XML-conforming and, if some simple guidelines are followed, operates in HTML 4 conforming user agents. Developers who migrate their content to XHTML 1.0 will realize the following benefits:</p>
+				</section>
+
+				<section>
+					<ul>
+						<li>XMLは<strong>Webサービス</strong>で使われる重要なフォーマット<strong>だった</strong></li>
+						<li>HTMLもXHTMLに<strong>移行しようとしていた</strong></li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="ecma357.png"/>
+				</section>
+
+				<section>
+					<h2>BUT...</h2>
+				</section>
+
+				<section>
+					<img src="xhtml-faq.png"/>
+					<p><a href="http://www.w3.org/2009/06/xhtml-faq.html">http://www.w3.org/2009/06/xhtml-faq.html</a></p>
+				</section>
+
+
+				<section>
+					<h2>THEN...</h2>
+				</section>
+
+				<section>
+					<p>The rationale: E4X has a standard, but <strong>is not part of the de facto open web</strong>: for a long time, it's <strong>implemented by only one browser</strong>, Firefox, and is not used for open web content. We are trying to advance SpiderMonkey and Firefox rapidly under intense competition, and keeping E4X slows down our development and <strong>increases the security attack surface</strong>.</p>
+					<p><a href="https://groups.google.com/forum/#!topic/mozilla.dev.tech.js-engine/yYQyMCcMf-0/discussion">https://groups.google.com/forum/#!topic/mozilla.dev.tech.js-engine/yYQyMCcMf-0/discussion</a></p>
+				</section>
+
+				<section>
+					<h2>セキュリティバグ</h2>
+					<ul>
+						<li><a href="http://www.mozilla-japan.org/security/announce/2006/mfsa2006-06.html">E4X、SVG、Canvas における整数オーバーフロー</a></li>
+						<li><a href="http://www.mozilla-japan.org/security/announce/2006/mfsa2006-08.html">「AnyName」による同調とアクセスコントロールの脆弱性</a></li>
+						<li><a href="http://www.mozilla-japan.org/security/announce/2008/mfsa2008-58.html">E4Xデフォルト名前空間におけるパースエラー</a></li>
+						<li><a href="http://www.mozilla-japan.org/security/announce/2010/mfsa2010-42.html">Webワーカーの importScripts を通じたクロスサイトデータ漏えい</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>E4Xの簡単な使い方</h2>
+				</section>
+
+				<section>
+					<h2>コンテンツ内で使う場合</h2>
+					<pre><code>&lt;script type="text/javascript;e4x=1"&gt;<br>...<br>&lt;/script&gt;</code></pre>
+				</section>
+
+				<section>
+					<h2>XMLオブジェクトを作成</h2>
+					<p>XMLコンストラクタの引数としてXMLを渡す</p>
+					<pre><code data-trim>var a = new XML("&lt;a&gt;&lt;/a&gt;");</code></pre>
+				</section>
+
+				<section>
+					<h2>XMLオブジェクトを作成</h2>
+					<p>もっと簡単にリテラルを使う</p>
+					<pre><code data-trim>var a = &lt;a&gt;&lt;/a&gt;;</code></pre>
+				</section>
+
+				<section>
+					<h2>属性 (attribute) </h2>
+					<p>要素の属性を設定</p>
+					<pre><code data-trim>a.@type = "abc"</code></pre>
+					<p>要素属性を参照</p>
+					<pre><code data-trim>a.@type</code></pre>
+				</section>
+
+				<section>
+					<h2>子ノードへのアクセス</h2>
+					<pre><code data-trim>a.b.c</code></pre>
+					<p>または</p>
+					<pre><code data-trim>a['b']</code></pre>
+				</section>
+
+				<section>
+					<p>テキストノード</p>
+					<pre><code data-trim>a.text()</code></pre>
+					<p>XMLノード</p>
+					<pre><code data-trim>a.toXMLString()</code></pre>
+				</section>
+
+				<section>
+					<p>すべての子ノード</p>
+					<pre><code data-trim>a.*</code></pre>
+					<p>XMLListとして返る</p>
+				</section>
+
+				<section>
+					<p>XMLListの参照にfor each...in</p>
+					<pre><code data-trim>for each (var childnode in a.b) {
+}</code></pre>
+				</section>
+
+				<section>
+					<h2>フィルタ</h2>
+					<pre><code data-trim>a.(@id == "abc")</code></pre>
+				</section>
+
+				<section>
+					<ul>
+						<li>クライアント側としては、いろいろなセキュリティ問題が発生しやすい<br>(ex. XML内にscriptが埋め込み可能)</li>
+						<li>JSONの登場</li>
+						<li>サーバーサイドとしては、有益だったんじゃない？</li>
+					</ul>
+				</section>
+
+
+				<section>
+					<h2>node.js ?</h2>
+					<p>Looks pretty neat. It'd be good if this functionality could be added directly to V8, but I've heard they aren't fond of implementing stuff that isn't part of the core standards.</p>
+				</section>
+
+				<section>
+					<h1>THE END</h1>
+					<h3>Makoto Kato / <a href="http://twitter.com/makoto_kato">@makoto_kato</a></h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: 'linear',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					// { src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					// { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
